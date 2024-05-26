@@ -133,7 +133,12 @@ const Home = () => {
                                         <h6>
                                             <a href="#">{product.name}</a>
                                         </h6>
-                                        <h5>{product.price}đ</h5>
+                                        <h5 style={{ color: "red" }}>
+                                            {new Intl.NumberFormat(
+                                                "de-DE"
+                                            ).format(product.price)}
+                                            đ
+                                        </h5>
                                     </div>
                                 </div>
                             </div>

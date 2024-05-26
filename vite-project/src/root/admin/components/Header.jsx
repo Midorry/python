@@ -37,7 +37,7 @@ const HeaderAdmin = () => {
                                 <div className="d-flex align-items-center">
                                     <img
                                         className="rounded-circle"
-                                        src="img/user.jpg"
+                                        src=""
                                         alt=""
                                         style={{
                                             width: "40px",
@@ -144,12 +144,12 @@ const HeaderAdmin = () => {
                         >
                             <img
                                 className="rounded-circle me-lg-2"
-                                src="img/user.jpg"
+                                src="../../../../public/assets/avatar.avif"
                                 alt=""
                                 style={{ width: "40px", height: "40px" }}
                             />
                             <span className="d-none d-lg-inline-flex">
-                                John Doe
+                                Admin
                             </span>
                         </a>
                         <div className="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">

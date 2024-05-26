@@ -41,37 +41,6 @@ const SignInForm = () => {
                 const password = values.password;
                 console.log(email, password);
 
-                // try {
-                //     const loggedInResponse = await fetch(
-                //         "http://localhost:3002/api/user/login",
-                //         {
-                //             method: "POST",
-                //             headers: { "Content-Type": "application/json" },
-                //             body: JSON.stringify(values),
-                //         }
-                //     );
-                //     const loggedIn = await loggedInResponse.json();
-                //     console.log(loggedIn);
-                //     onSubmitProps.resetForm();
-                //     // make sure you have a token
-                //     if (loggedIn.msg !== "Invalid credentials") {
-                //         // dispatch(
-                //         //     setLogin({
-                //         //         user: loggedIn.user,
-                //         //         token: loggedIn.token,
-                //         //     })
-                //         // );
-
-                //         navigate("/home");
-                //     }
-                // } catch (error) {
-                //     if (error.response.status === 400) {
-                //         onSubmitProps.setErrors({
-                //             email: "Invalid email or password",
-                //         });
-                //     }
-                // }
-
                 await axios
                     .post(
                         "http://127.0.0.1:5000/user/login",
@@ -148,8 +117,8 @@ const SignInForm = () => {
                             Submit
                         </button>
 
-                        <p className="pt-2">
-                            Do you have an account? Sign up
+                        <p className="pt-2" style={{ color: "black" }}>
+                            You don't have an account? Sign up
                             <a className="text-blue-500" href="/sign-up">
                                 Here!
                             </a>

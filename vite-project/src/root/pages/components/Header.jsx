@@ -47,23 +47,26 @@ const Header = () => {
                                             <i className="fa fa-pinterest-p"></i>
                                         </a>
                                     </div>
-                                    <div className="header__top__right__language">
-                                        <img src="img/language.png" alt="" />
-                                        <div>English</div>
-                                        <span className="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Spanis</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">English</a>
-                                            </li>
-                                        </ul>
-                                    </div>
+
                                     <div className="header__top__right__auth">
-                                        <a href="#">
-                                            <i className="fa fa-user"></i> Login
-                                        </a>
+                                        <NavLink to="/">
+                                            <i className="fa fa-user"></i>
+                                            {window.localStorage.getItem(
+                                                "isLogged"
+                                            ) ? (
+                                                <button
+                                                    onClick={() => {
+                                                        localStorage.removeItem(
+                                                            "isLogged"
+                                                        );
+                                                    }}
+                                                >
+                                                    Logout
+                                                </button>
+                                            ) : (
+                                                "Login"
+                                            )}
+                                        </NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -166,37 +169,37 @@ const Header = () => {
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="#">Fresh Meat</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Vegetables</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Fruit & Nut Gifts</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Fresh Berries</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Ocean Foods</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Butter & Eggs</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Fastfood</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Fresh Onion</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Papayaya & Crisps</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Oatmeal</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                     <li>
-                                        <a href="#">Fresh Bananas</a>
+                                        <a href="#">Departments</a>
                                     </li>
                                 </ul>
                             </div>
@@ -205,10 +208,6 @@ const Header = () => {
                             <div className="hero__search">
                                 <div className="hero__search__form">
                                     <form action="#">
-                                        <div className="hero__search__categories">
-                                            All Categories
-                                            <span className="arrow_carrot-down"></span>
-                                        </div>
                                         <input
                                             type="text"
                                             placeholder="What do yo u need?"
@@ -233,23 +232,30 @@ const Header = () => {
                             </div>
                             {location.pathname === "/home" ? (
                                 <div
-                                    className="hero__item set-bg"
+                                    className="hero__item "
                                     style={{
                                         backgroundImage: `url(../../../public/assets/img/hero/banner.jpg")`,
                                     }}
                                     data-setbg="../../../public/assets/img/hero/banner.jpg"
                                 >
                                     <img
+                                        className="set-bg"
                                         style={{
+                                            width: "100%",
+                                            height: "inherit",
                                             position: "absolute",
                                             content: "",
                                             right: 0,
                                         }}
-                                        src="../../../public/assets/img/hero/banner.jpg"
+                                        src="../../../public/assets/banner.avif"
                                     ></img>
                                     <div className="hero__text">
-                                        <span>FRUIT FRESH</span>
-                                        <h2>
+                                        <span>Mobile Phone</span>
+                                        <h2
+                                            style={{
+                                                color: "white !important",
+                                            }}
+                                        >
                                             Vegetable <br />
                                             100% Organic
                                         </h2>

@@ -95,8 +95,8 @@ const SignUpForm = () => {
                             Submit
                         </button>
 
-                        <p className="pt-2">
-                            Do you have an account? Sign up
+                        <p className="pt-2" style={{ color: "black" }}>
+                            Do you have an account? Sign in
                             <a className="text-blue-500" href="/">
                                 Here!
                             </a>
